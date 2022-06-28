@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Music App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For live demo you can visit the link https://music-app-react-typescript.web.app/ 
+
+## Add Dependencies
+
+In the project directory, you can first run:
+
+### `npm intall`
 
 ## Available Scripts
 
