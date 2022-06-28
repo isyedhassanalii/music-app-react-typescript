@@ -1,0 +1,148 @@
+$border-radius: 20px;
+$base: #071739;
+$shadow-color: #274684;
+$white: #fff;
+$transition: 0.3s;
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: #2d3436;
+  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  min-height: 100vh;
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 0;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 371px;
+    padding: 0 5px;
+    margin-top: 40px;
+    border-radius: $border-radius;
+    color: $white;
+    font-weight: 100;
+    box-shadow: 0px 0px 70px 0px $shadow-color;
+    background: $base;
+    overflow: hidden;
+    .current-song {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 15px;
+      border-radius: $border-radius;
+      color: $base;
+      background: $white;
+      background-color: #000000;
+      background-image: linear-gradient(147deg, #000000 0%, #04619f);
+    
+      .song-name {
+        margin-top: 30px;
+        font-size: 22px;
+        color: $white;
+      }
+      .song-autor {
+        color: $white;
+      }
+   
+     
+      .controls {
+        margin-top: 10px;
+        padding-left: 100px;
+        button {
+          color: $base;
+          border-radius: 50%;
+          margin: 15px;
+          font-size: 18px;
+          text-align: center;
+          transition: $transition;
+          cursor: pointer;
+          border: none;
+          background: 0;
+          color: $white;
+          &.prev-next {
+            width: 70px;
+            height: 35px;
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+  
+  }
+}
+
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  & .infinite {
+    animation-iteration-count: infinite;
+  }
+}
+
+.box1 {
+  width: 16rem;
+  height: 16rem;
+  background: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+  margin: 1rem auto;
+  border-radius: 100%;
+  border: 0.5rem solid #f53844;
+  transform: rotate(0deg);
+  img {
+    max-width: 100%;
+    border-radius: 100%;
+  }
+}
+
+.rotate {
+  animation: rotation-full 20s infinite linear;
+}
+
+.rotate-full {
+  animation: infinite-spinning 30s infinite linear;
+}
+
+
+.fa-heart:before {
+  content: '\f004';
+  color: red;
+  font-size: 19px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom_navbar {
+  text-align: center;
+  color: white;
+  background-color: #2d3436;
+  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  width: 100%;
+  height: 30px;
+  span {
+    font-size: 25px;
+  }
+}
+.like {
+  display: flex;
+  align-items: baseline;
+}
+.custom__audio {
+  padding-top: 20px;
+}
